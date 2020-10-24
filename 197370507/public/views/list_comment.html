@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Comment list</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/adminlte.css">
+    <link href="https://cdn.bootcss.com/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body class="hold-transition sidebar-mini"  style="background-color: #dddddd">
+<div class="wrapper">
+
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="margin-left:0px;!important;">
+<!--        <ul class="navbar-nav" id="my-nav">-->
+<!--            <li class="nav-item"><a class="nav-link" href="#" role="button"><i class="fas fa-bars"></i></a></li>-->
+<!--            <li class="nav-item d-none d-sm-inline-block active"><a href="all_article" class="nav-link">All Articles</a></li>-->
+<!--            <li class="nav-item d-none d-sm-inline-block"><a href="list_article" class="nav-link">My Articles</a></li>-->
+<!--            <li class="nav-item d-none d-sm-inline-block"><a href="post_article" class="nav-link">New</a></li>-->
+<!--            <li class="nav-item d-none d-sm-inline-block"><a href="list_collect" class="nav-link">My Collect</a></li>-->
+<!--        </ul>-->
+<!--        <ul class="navbar-nav ml-auto">-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" data-toggle="dropdown" href="#">-->
+<!--                    <i class="far fa-sign-out" class="logout" onclick="logout()">logout</i>-->
+<!--                </a>-->
+<!--            </li>-->
+<!--        </ul>-->
+    </nav>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row" style="margin-top: 20px">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Comment List</h3>
+                        </div>
+
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>title</th>
+                                    <th>description</th>
+<!--                                    <th>content</th>-->
+                                    <th>post date</th>
+<!--                                    <th>comment content</th>-->
+                                    <th>comment date</th>
+                                    <th>comment username</th>
+                                    <th>option</th>
+                                </tr>
+                                </thead>
+                                <tbody id="group-list">
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="modal" id="commentModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Edit Comment Here :)</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <input type="hidden" id="comment-cid">
+                <textarea  class="form-control" name="" id="comment-content" cols="30" rows="10"></textarea>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="saveComment()">Save</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<%- include("./footer.html") %>
+<script>
+
+    let aid = '<%= aid %>'
+    console.log(aid)
+    initCommentList(aid);
+</script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Add Article</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/adminlte.css">
+    <link href="https://cdn.bootcss.com/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body class="hold-transition sidebar-mini"  style="background-color: #dddddd">
+<div class="wrapper">
+
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="margin-left:0px;!important;">
+        <ul class="navbar-nav" id="my-nav">
+            <li class="nav-item"><a class="nav-link" href="#" role="button"><i class="fas fa-bars"></i></a></li>
+            <li class="nav-item d-none d-sm-inline-block"><a href="all_article" class="nav-link">All Articles</a></li>
+            <li class="nav-item d-none d-sm-inline-block"><a href="list_article" class="nav-link">My Articles</a></li>
+            <li class="nav-item d-none d-sm-inline-block active"><a href="post_article" class="nav-link">Add Article</a></li>
+            <li class="nav-item d-none d-sm-inline-block"><a href="list_collect" class="nav-link">My Collect</a></li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                    <i class="far fa-sign-out" class="logout" onclick="logout()">logout</i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row" style="margin-top: 20px">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Add Article </h3>
+                        </div>
+
+                        <div class="card-body">
+                            <div>
+                                <div class="form-group">
+                                    <label>title</label>
+                                    <input type="text" class="form-control" id="title" placeholder="title" style="width: 200px" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>description</label>
+                                    <input type="text" class="form-control" id="description" placeholder="description" style="width: 200px" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>content</label>
+                                    <textarea name="content" id="content" class="form-control" cols="30" rows="10"></textarea>
+                                </div>
+                                <button type="button" class="btn btn-primary" onclick="addNewArticle()">Submit</button>
+                            </div>
+                        </div>
+                        <div class="card-footer" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<%- include("./footer.html") %>
