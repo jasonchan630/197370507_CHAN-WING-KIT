@@ -1,0 +1,14 @@
+{
+  "restartable": "rs",
+  "verbose": true,
+  "watch": [
+    "api/",
+    "database/",
+    "public/",
+    "index.ts"
+  ],
+  "ignore": [
+  ],
+  "delay": "1000",
+  "ext": "ts ejs yml json"
+}
