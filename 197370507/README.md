@@ -1,20 +1,20 @@
 npm install --save
 node app.js
-访问 localhsot:3000
+瑷晱 localhsot:3000
 
-#注册 ok
-#登录 ok
+#娉ㄥ唽 ok
+#鐧诲叆 ok
 #POST
-    创建文章 ok
-    创建评论 ok
-    收藏文章 ok
+    鏂板鏂囩珷 ok
+    鏂板瑭曡珫 ok
+    鏀惰棌鏂囩珷 ok
 #PUT
-    修改文章 ok
-    修改评论 ok
+    淇敼鏂囩珷 ok
+    淇敼瑭曡珫 ok
 #DELETE
-    删除文章 ok
-    删除评论 ok
+    鍒犻櫎鏂囩珷 ok
+    鍒犻櫎瑭曡珫 ok
 #GET
-    文章列表 ok
-    收藏列表 ok
-    评论列表 ok
+    鏂囩珷鍒楄〃 ok
+    鏀惰棌鍒楄〃 ok
+    瑭曡珫鍒楄〃 ok
